@@ -12,6 +12,8 @@ workflows:
           if [ ! -d "android" ]; then
             flutter create --platforms=android --org com.farzan .
           fi
+          echo "Checking MainActivity..."
+          find android -name MainActivity.kt
 
       - name: جایگزینی فایل‌های gradle آماده‌شده با پشتیبانی Firebase
         script: |
