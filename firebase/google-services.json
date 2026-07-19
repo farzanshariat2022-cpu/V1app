@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "45126654090",
+    "project_id": "the-architect-97c0b",
+    "storage_bucket": "the-architect-97c0b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45126654090:android:90eb393177a5b7bf35f573",
+        "android_client_info": {
+          "package_name": "com.architect.thearchitect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWE1IgWJlnQr3R1iMyWCWUb_UfMPLJ8XI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
