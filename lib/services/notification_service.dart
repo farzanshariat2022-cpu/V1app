@@ -90,7 +90,9 @@ class NotificationService {
         ),
       ),
       androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
-      matchDateTimeComponents: DateTimeComponents.time, // تکرار روزانه در همین ساعت
+uiLocalNotificationDateInterpretation:
+    UILocalNotificationDateInterpretation.absoluteTime,
+matchDateTimeComponents: DateTimeComponents.time, // تکرار روزانه در همین ساعت
     );
   }
 
@@ -121,7 +123,9 @@ class NotificationService {
         ),
       ),
       androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
-    );
+uiLocalNotificationDateInterpretation:
+    UILocalNotificationDateInterpretation.absoluteTime,
+);
   }
 
   Future<void> cancelTaskReminder(String taskId) async {
