@@ -15,7 +15,12 @@ class GeminiService {
     required String apiKey,
     required String prompt,
   }) async {
-    if (apiKey.isEmpty) return null;
+    if (apiKey.isEmpty) {
+  print("GEMINI ERROR: API KEY IS EMPTY");
+  return null;
+}
+
+print("GEMINI KEY LENGTH: ${apiKey.length}");
 
     final uri = Uri.parse(
       'https://generativelanguage.googleapis.com/v1beta/models/$_model:generateContent?key=$apiKey',
