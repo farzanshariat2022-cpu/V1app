@@ -9,7 +9,7 @@ import 'package:http/http.dart' as http;
 /// در Firestore (سند خود کاربر، پشت قوانین امنیتی auth.uid==userId) پذیرفتنی
 /// است. اگر بعداً اپ را عمومی کردی، حتما این تماس را پشت یک بک‌اند ببر.
 class GeminiService {
-  static const _model = 'gemini-1.5-flash';
+  static const _model = 'gemini-2.0-flash';
 
   Future<String?> generateText({
     required String apiKey,
