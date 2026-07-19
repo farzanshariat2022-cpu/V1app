@@ -41,9 +41,10 @@ class GeminiService {
       );
 
       if (response.statusCode != 200) {
-        return null; // در صورت خطا، سرویس فراخواننده باید fallback قالبی نمایش دهد
+  print("GEMINI ERROR ${response.statusCode}");
+  print(response.body);
+  return null;
       }
-
       final data = jsonDecode(utf8.decode(response.bodyBytes));
       final candidates = data['candidates'] as List?;
       if (candidates == null || candidates.isEmpty) return null;
