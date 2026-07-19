@@ -6,14 +6,21 @@ workflows:
     environment:
       flutter: stable
     scripts:
-      - name: تولید ساختار پروژه اندروید (چون این ریپو بدون android/ ارسال شده)
+      - name: تولید ساختار پروژه اندروید
         script: |
-          set -e
-          if [ ! -d "android" ]; then
-            flutter create --platforms=android --org com.farzan .
-          fi
-          echo "Checking MainActivity..."
-          find android -name MainActivity.kt
+    set -e
+
+    rm -rf android
+
+    flutter create \
+      --platforms=android \
+      --org com.farzan \
+      --project-name architect \
+      .
+
+    echo "===== CHECK MAIN ACTIVITY ====="
+    find android -name MainActivity.kt
+    echo "==============================="
 
       - name: جایگزینی فایل‌های gradle آماده‌شده با پشتیبانی Firebase
         script: |
